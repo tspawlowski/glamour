@@ -9,6 +9,7 @@ import (
 
 	"github.com/muesli/termenv"
 	"github.com/yuin/goldmark"
+	meta "github.com/yuin/goldmark-meta"
 	"github.com/yuin/goldmark/extension"
 	"github.com/yuin/goldmark/parser"
 	"github.com/yuin/goldmark/renderer"
@@ -55,6 +56,7 @@ func NewTermRenderer(options ...TermRendererOption) (*TermRenderer, error) {
 			goldmark.WithExtensions(
 				extension.GFM,
 				extension.DefinitionList,
+				meta.New(meta.WithTable()),
 			),
 			goldmark.WithParserOptions(
 				parser.WithAutoHeadingID(),
@@ -74,6 +76,7 @@ func NewTermRenderer(options ...TermRendererOption) (*TermRenderer, error) {
 	tr.md.SetRenderer(
 		renderer.NewRenderer(
 			renderer.WithNodeRenderers(
+				util.Prioritized(extension.NewTableHTMLRenderer(), 500),
 				util.Prioritized(ar, 1000),
 			),
 		),

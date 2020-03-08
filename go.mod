@@ -9,4 +9,5 @@ require (
 	github.com/muesli/termenv v0.4.0
 	github.com/olekukonko/tablewriter v0.0.4
 	github.com/yuin/goldmark v1.1.24
+	github.com/yuin/goldmark-meta v0.0.0-20191126180153-f0638e958b60
 )
