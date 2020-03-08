@@ -56,7 +56,7 @@ func NewTermRenderer(options ...TermRendererOption) (*TermRenderer, error) {
 			goldmark.WithExtensions(
 				extension.GFM,
 				extension.DefinitionList,
-				meta.New(meta.WithTable()),
+				meta.Meta,
 			),
 			goldmark.WithParserOptions(
 				parser.WithAutoHeadingID(),
@@ -76,7 +76,6 @@ func NewTermRenderer(options ...TermRendererOption) (*TermRenderer, error) {
 	tr.md.SetRenderer(
 		renderer.NewRenderer(
 			renderer.WithNodeRenderers(
-				util.Prioritized(extension.NewTableHTMLRenderer(), 500),
 				util.Prioritized(ar, 1000),
 			),
 		),
