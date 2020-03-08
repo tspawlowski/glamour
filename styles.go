@@ -5,7 +5,7 @@ package glamour
 import (
 	"github.com/muesli/termenv"
 
-	"github.com/charmbracelet/glamour/ansi"
+	"github.com/tspawlowski/glamour/ansi"
 )
 
 var (
