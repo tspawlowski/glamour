@@ -6,7 +6,7 @@ import (
 	"github.com/alecthomas/chroma"
 	"github.com/alecthomas/chroma/quick"
 	"github.com/alecthomas/chroma/styles"
-	"github.com/muesli/reflow/indent"
+	indent "github.com/muesli/reflow/indent"
 )
 
 // A CodeBlockElement is used to render code blocks.

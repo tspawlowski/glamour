@@ -3,8 +3,8 @@ package ansi
 import (
 	"io"
 
-	"github.com/muesli/reflow/indent"
-	"github.com/muesli/reflow/padding"
+	indent "github.com/muesli/reflow/indent"
+	padding "github.com/muesli/reflow/padding"
 )
 
 // MarginWriter is a Writer that applies indentation and padding around

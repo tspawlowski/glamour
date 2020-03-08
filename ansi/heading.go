@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/muesli/reflow/indent"
+	indent "github.com/muesli/reflow/indent"
 	"github.com/muesli/reflow/wordwrap"
 )
 
